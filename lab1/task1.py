@@ -1,4 +1,14 @@
-# TODO: build a confidence interval
+"""
+build a confidence interval for:
+    -  mathematical expectation in the assumption that there are random variables
+            that have a normal distribution, but the variance is unknown.
+    -  mathematical expectation in the assumption that there are random variables
+            whose distribution is unknown.
+    -  confidence interval for variance in the assumption that there are random variables
+            that have a normal distribution.
+"""
+
+
 # https://aegis4048.github.io/comprehensive_confidence_intervals_for_python_developers
 import numpy as np
 import seaborn as sns
@@ -11,7 +21,7 @@ np.random.seed(seed)
 plt.style.use('ggplot')
 
 
-def A(arr):
+def task_a(arr) -> tuple:
     """
     confidence interval for mathematical expectation in the assumption that there are random variables
         that have a normal distribution, but the variance is unknown.
@@ -23,8 +33,8 @@ def A(arr):
     #  ppf -  probability percentile function, функция, обратная к функции распределения
     n = len(arr)                               # sample sizes
     df = n - 1                                 # degrees of freedom
-    s = np.std(arr, ddof=1)                    # sample standard deviation
     t = stats.t.ppf(1 - (1 - gamma) / 2., df)  # t-critical value for 99% CI = 2.576
+    s = np.std(arr, ddof=1)                    # sample standard deviation
 
     lower = np.mean(arr) - (t * s / np.sqrt(n))
     upper = np.mean(arr) + (t * s / np.sqrt(n))
@@ -32,7 +42,7 @@ def A(arr):
     return lower.astype('float16'), upper.astype('float16')
 
 
-def B(arr):
+def task_b(arr):
     """
     confidence interval for mathematical expectation in the assumption that there are random variables
         whose distribution is unknown.
@@ -42,8 +52,8 @@ def B(arr):
     :param arr: sample
     :return: confidence interval for a population mean
     """
-    z = stats.norm.ppf(q=1 - (1 - gamma) / 2.)
     n = len(arr)
+    z = stats.norm.ppf(q=1 - (1 - gamma) / 2.)
     s = np.std(arr, ddof=1)
 
     lower = np.mean(arr) - (z * s / np.sqrt(n))
@@ -52,7 +62,7 @@ def B(arr):
     return lower.astype('float16'), upper.astype('float16')
 
 
-def C(arr):
+def task_c(arr):
     """
     confidence interval for variance in the assumption that there are random variables
         that have a normal distribution.
@@ -82,4 +92,4 @@ if __name__ == '__main__':
         sns.histplot(x=sample, kde=True, color='orange')
         plt.show()
         print(idx, "Sample_size = ", sample_size,
-              ", a in {}, a in {}, sigma**2 in {}".format(A(sample), B(sample), C(sample)))
+              ", a in {}, a in {}, sigma**2 in {}".format(task_a(sample), task_b(sample), task_c(sample)))

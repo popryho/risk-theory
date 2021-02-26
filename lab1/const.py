@@ -1,3 +1,6 @@
+"""
+CONFIG FILE
+"""
 # -*- coding: utf-8 -*-
 
 gamma = 0.99               # confidence level = 1 - significance level
@@ -7,5 +10,3 @@ seed = 0xdead              # a number used to initialize a pseudorandom number g
 
 alpha = [1, 0.3, 0.1]      # parameters
 eps = 0.01                 # relative error
-n_0 = 0                    # the initial number of implementations required to "stabilize" the variance.
-
