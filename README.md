@@ -12,6 +12,6 @@
       -  variance in the assumption that there are random variables
               that have a normal distribution.
 
-  ### rask 2
+  ### task 2
 
   Calculate the integral in four ways and estimate the rates of convergence.
