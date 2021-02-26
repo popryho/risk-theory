@@ -1,10 +1,10 @@
 """
 build a confidence interval for:
-    -  mathematical expectation in the assumption that there are random variables
+    -  expected value in the assumption that there are random variables
             that have a normal distribution, but the variance is unknown.
-    -  mathematical expectation in the assumption that there are random variables
+    -  expected value in the assumption that there are random variables
             whose distribution is unknown.
-    -  confidence interval for variance in the assumption that there are random variables
+    -  variance in the assumption that there are random variables
             that have a normal distribution.
 """
 
