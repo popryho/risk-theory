@@ -90,6 +90,11 @@ if __name__ == '__main__':
 
         sample = np.random.choice(a=population, size=sample_size)
         sns.histplot(x=sample, kde=True, color='orange')
-        plt.show()
-        print(idx, "Sample_size = ", sample_size,
-              ", a in {}, a in {}, sigma**2 in {}".format(task_a(sample), task_b(sample), task_c(sample)))
+        plt.savefig(f'../lab1/images/output_task1_{idx}.png', bbox_inches='tight')
+        plt.close()
+
+        with open('output_task1.txt', 'a+') as txt:
+            txt.write(f"{idx}, Sample_size = {sample_size}, "
+                      f"a in {task_a(sample)}, "
+                      f"a in {task_b(sample)}, "
+                      f"sigma**2 in {task_c(sample)}\n")

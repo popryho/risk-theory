@@ -1,0 +1,15 @@
+alpha = 1:
+method_1, expected value = 0.4541990099009901, variance = 0.24790251475398484, sample length = 1010000, time = 0.14740991592407227
+method_2, expected value = 0.4541825909567632, variance = 0.03525825579099828, sample length = 20000, time = 0.008008480072021484
+method_3, expected value = 0.4559692423339546, variance = 0.14002811545038224, sample length = 50000, time = 0.009350299835205078
+method_4, expected value = 0.45602123542145895, variance = 0.19766877497785704, sample length = 70000, time = 0.04005312919616699
+
+alpha = 0.1:
+method_1, expected value = 0.0154644, variance = 0.015225255377691075, sample length = 5000000, time = 1.2347774505615234
+method_2, expected value = 0.015543489494725336, variance = 0.0037629333947470558, sample length = 1050000, time = 0.737194299697876
+method_3, expected value = 0.015500726329876724, variance = 0.0010349587216349218, sample length = 290000, time = 0.313373327255249
+method_4, expected value = 0.015478678856367278, variance = 6.282409167520533e-07, sample length = 10003, time = 0.0
+
+alpha = 0.01:
+method_3, expected value = 0.0001992553145053081, variance = 1.9837174154805344e-07, sample length = 340000, time = 0.19200396537780762
+method_4, expected value = 0.00019991748757828794, variance = 1.3708103474124713e-16, sample length = 2, time = 0.0
