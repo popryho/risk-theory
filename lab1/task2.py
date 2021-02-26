@@ -113,8 +113,8 @@ def method_4(a, n_0):
 
         expected_q = (2 / np.power(beta, 4)) * (1 - np.exp(- np.power(a * beta, 4)))
         if n > num_of_implementation(expected_q):
-            with open('output_task2.txt', 'a') as txt_file:
-                txt_file.write(f"method_{4}, expected value = {expected_q.mean()}, "
+            with open('output_task2.txt', 'a') as txt:
+                txt.write(f"method_{4}, expected value = {expected_q.mean()}, "
                                f"variance = {expected_q.var(ddof=1)}, "
                                f"sample length = {int(n)}, "
                                f"time = {time() - start_time}\n")
