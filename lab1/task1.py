@@ -93,7 +93,7 @@ if __name__ == '__main__':
         plt.savefig(f'../lab1/images/output_task1_{idx}.png', bbox_inches='tight')
         plt.close()
 
-        with open('output_task1.txt', 'a+') as txt:
+        with open('output/output_task1.txt', 'a+') as txt:
             txt.write(f"{idx}, Sample_size = {sample_size}, "
                       f"a in {task_a(sample)}, "
                       f"a in {task_b(sample)}, "

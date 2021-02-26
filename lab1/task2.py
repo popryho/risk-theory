@@ -52,7 +52,7 @@ def method_1(a, n_0):
         expected_q = ((np.array(eta) - np.array(ksi)) > 0).astype(np.uint8)
 
         if n > num_of_implementation(expected_q):
-            with open('output_task2.txt', 'a') as txt:
+            with open('output/output_task2.txt', 'a') as txt:
                 txt.write(f"method_{1}, expected value = {expected_q.mean()}, "
                           f"variance = {expected_q.var(ddof=1)}, "
                           f"sample length = {int(n)}, "
@@ -72,7 +72,7 @@ def method_2(a, n_0):
         expected_q = np.exp(-np.power(ksi, 2))
 
         if n > num_of_implementation(expected_q):
-            with open('output_task2.txt', 'a') as txt:
+            with open('output/output_task2.txt', 'a') as txt:
                 txt.write(f"method_{2}, expected value = {expected_q.mean()}, "
                           f"variance = {expected_q.var(ddof=1)}, "
                           f"sample length = {int(n)}, "
@@ -92,7 +92,7 @@ def method_3(a, n_0):
         expected_q = 1 - np.exp(-np.power(a * eta, 4))
 
         if n > num_of_implementation(expected_q):
-            with open('output_task2.txt', 'a') as txt:
+            with open('output/output_task2.txt', 'a') as txt:
                 txt.write(f"method_{3}, expected value = {expected_q.mean()}, "
                           f"variance = {expected_q.var(ddof=1)}, "
                           f"sample length = {int(n)}, "
@@ -113,7 +113,7 @@ def method_4(a, n_0):
 
         expected_q = (2 / np.power(beta, 4)) * (1 - np.exp(- np.power(a * beta, 4)))
         if n > num_of_implementation(expected_q):
-            with open('output_task2.txt', 'a') as txt:
+            with open('output/output_task2.txt', 'a') as txt:
                 txt.write(f"method_{4}, expected value = {expected_q.mean()}, "
                                f"variance = {expected_q.var(ddof=1)}, "
                                f"sample length = {int(n)}, "
@@ -127,7 +127,7 @@ if __name__ == '__main__':
     """
     alpha = 1
     """
-    with open('output_task2.txt', 'a') as txt_file:
+    with open('output/output_task2.txt', 'a') as txt_file:
         txt_file.write(f"alpha = {1}:\n")
     [fun(alpha[0], n) for fun, n in zip((method_1, method_2, method_3, method_4),
                                         (1e4, 1e4, 1e4, 1e4))]
@@ -135,7 +135,7 @@ if __name__ == '__main__':
     """
     alpha = 0.1
     """
-    with open('output_task2.txt', 'a') as txt_file:
+    with open('output/output_task2.txt', 'a') as txt_file:
         txt_file.write(f"\nalpha = {0.1}:\n")
     [fun(alpha[1], n) for fun, n in zip((method_1, method_2, method_3, method_4),
                                         (4e6, 1e6, 2e5, 3))]
@@ -143,7 +143,7 @@ if __name__ == '__main__':
     """
     alpha = 0.01
     """
-    with open('output_task2.txt', 'a') as txt_file:
+    with open('output/output_task2.txt', 'a') as txt_file:
         txt_file.write(f"\nalpha = {0.01}:\n")
     [fun(alpha[2], n) for fun, n in zip((method_3, method_4),
                                         (3e5, 2))]
