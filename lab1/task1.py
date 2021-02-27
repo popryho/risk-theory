@@ -39,7 +39,7 @@ def task_a(arr) -> tuple:
     lower = np.mean(arr) - (t * s / np.sqrt(n))
     upper = np.mean(arr) + (t * s / np.sqrt(n))
 
-    return lower.astype('float16'), upper.astype('float16')
+    return lower, upper
 
 
 def task_b(arr):
@@ -59,7 +59,7 @@ def task_b(arr):
     lower = np.mean(arr) - (z * s / np.sqrt(n))
     upper = np.mean(arr) + (z * s / np.sqrt(n))
 
-    return lower.astype('float16'), upper.astype('float16')
+    return lower, upper
 
 
 def task_c(arr):
@@ -79,7 +79,7 @@ def task_c(arr):
     upper = (n - 1) * s2 / stats.chi2.ppf((1 - gamma) / 2, df)
     lower = (n - 1) * s2 / stats.chi2.ppf(1 - (1 - gamma) / 2, df)
 
-    return lower.astype('float16'), upper.astype('float16')
+    return lower, upper
 
 
 if __name__ == '__main__':
@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
         with open('output/output_task1.txt', 'a+') as txt:
             txt.write(f"Sample_size = {sample_size}: "
-                      f"Mean = {np.mean(sample)}, Variance= {np.std(sample, ddof=1)}\n"
-                      f"A. {task_a(sample)},\n"
-                      f"B. {task_b(sample)},\n"
+                      f"Mean = {np.mean(sample)}, Variance = {np.std(sample, ddof=1)}\n"
+                      f"A. {task_a(sample)}\n"
+                      f"B. {task_b(sample)}\n"
                       f"C. {task_c(sample)}\n\n")
