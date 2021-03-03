@@ -5,6 +5,7 @@
   ### task 1
 
   Build a confidence interval for:
+  
       -  expected value in the assumption that there are random variables
               that have a normal distribution, but the variance is unknown.
       -  expected value in the assumption that there are random variables
