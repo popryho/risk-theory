@@ -58,7 +58,7 @@ def method_1(a, n_0):
                           f"sample length = {int(n)}, "
                           f"time = {time() - start_time}\n")
             break
-        n += 1e6
+        n += 1
 
 
 def method_2(a, n_0):
@@ -78,7 +78,7 @@ def method_2(a, n_0):
                           f"sample length = {int(n)}, "
                           f"time = {time() - start_time}\n")
             break
-        n += int(1e4)
+        n += 1
 
 
 def method_3(a, n_0):
@@ -98,7 +98,7 @@ def method_3(a, n_0):
                           f"sample length = {int(n)}, "
                           f"time = {time() - start_time}\n")
             break
-        n += 1e4
+        n += 1
 
 
 def method_4(a, n_0):
@@ -119,7 +119,7 @@ def method_4(a, n_0):
                                f"sample length = {int(n)}, "
                                f"time = {time() - start_time}\n")
             break
-        n += 1e4
+        n += 1
 
 
 if __name__ == '__main__':
@@ -130,7 +130,7 @@ if __name__ == '__main__':
     with open('output/output_task2.txt', 'a') as txt_file:
         txt_file.write(f"alpha = {1}:\n")
     [fun(alpha[0], n) for fun, n in zip((method_1, method_2, method_3, method_4),
-                                        (1e4, 1e4, 1e4, 1e4))]
+                                        (7.5e4, 1e4, 4e4, 6e4))]
 
     """
     alpha = 0.1
@@ -138,7 +138,7 @@ if __name__ == '__main__':
     with open('output/output_task2.txt', 'a') as txt_file:
         txt_file.write(f"\nalpha = {0.1}:\n")
     [fun(alpha[1], n) for fun, n in zip((method_1, method_2, method_3, method_4),
-                                        (4e6, 1e6, 2e5, 3))]
+                                        (4.15e6, 1.02e6, 2.7e5, 2))]
 
     """
     alpha = 0.01
@@ -146,4 +146,4 @@ if __name__ == '__main__':
     with open('output/output_task2.txt', 'a') as txt_file:
         txt_file.write(f"\nalpha = {0.01}:\n")
     [fun(alpha[2], n) for fun, n in zip((method_3, method_4),
-                                        (3e5, 2))]
+                                        (3.2e5, 2))]
