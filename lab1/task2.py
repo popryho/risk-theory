@@ -130,20 +130,20 @@ if __name__ == '__main__':
     with open('output/output_task2.txt', 'a') as txt_file:
         txt_file.write(f"alpha = {1}:\n")
     [fun(alpha[0], n) for fun, n in zip((method_1, method_2, method_3, method_4),
-                                        (7.5e4, 1e4, 4e4, 6e4))]
+                                        (7.8e4, 1.1e4, 4.4e4, 6.2e4))]
+
+    """
+    alpha = 0.3
+    """
+    with open('output/output_task2.txt', 'a') as txt_file:
+        txt_file.write(f"\nalpha = {0.3}:\n")
+    [fun(alpha[1], n) for fun, n in zip((method_1, method_2, method_3, method_4),
+                                        (4196463, 1036831, 284264, 2))]
 
     """
     alpha = 0.1
     """
     with open('output/output_task2.txt', 'a') as txt_file:
         txt_file.write(f"\nalpha = {0.1}:\n")
-    [fun(alpha[1], n) for fun, n in zip((method_1, method_2, method_3, method_4),
-                                        (4.15e6, 1.02e6, 2.7e5, 2))]
-
-    """
-    alpha = 0.01
-    """
-    with open('output/output_task2.txt', 'a') as txt_file:
-        txt_file.write(f"\nalpha = {0.01}:\n")
     [fun(alpha[2], n) for fun, n in zip((method_3, method_4),
-                                        (3.2e5, 2))]
+                                        (319853, 2))]

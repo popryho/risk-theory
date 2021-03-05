@@ -1,15 +1,15 @@
 alpha = 1:
-method_1, expected value = 0.4594459982376154, variance = 0.24835854470388435, sample length = 78303, time = 32.300623416900635
-method_2, expected value = 0.4578408226487103, variance = 0.035468237095218735, sample length = 11239, time = 1.6393697261810303
-method_3, expected value = 0.45838329776257064, variance = 0.13999393857587755, sample length = 44370, time = 19.023744821548462
-method_4, expected value = 0.4553719982437187, variance = 0.19384000276464844, sample length = 62041, time = 20.37646245956421
+method_1, expected value = 0.45985551058051954, variance = 0.24839160170314406, sample length = 78068, time = 30.7190077304840088
+method_2, expected value = 0.45575655339762977, variance = 0.03489206744988919, sample length = 11157, time = 10.18097352981567383
+method_3, expected value = 0.45866125007662745, variance = 0.14072745687918758, sample length = 44443, time = 17.8600661754608154
+method_4, expected value = 0.45324721514396255, variance = 0.1919002481357056, sample length = 62159, time = 27.5730252265930176
+
+alpha = 0.3:
+method_1, expected value = 0.015571875068509863, variance = 0.015329395428281602, sample length = 4196476, time = 604.235901832580566
+method_2, expected value = 0.015492451348362598, variance = 0.00373571367786031, sample length = 1036843, time = 145.6160802841186523
+method_3, expected value = 0.015562128020233903, variance = 0.0010317568343409338, sample length = 284265, time = 37.07001852989196777
+method_4, expected value = 0.015683709835340943, variance = 2.313510414563186e-07, sample length = 86, time = 0.016999244689941406
 
 alpha = 0.1:
-method_1, expected value = 0.01571456676532314, variance = 0.01546762287679175, sample length = 4157862, time = 6045.124329090118
-method_2, expected value = 0.01562653372378368, variance = 0.0037812477566981414, sample length = 1027835, time = 1026.199518918991
-method_3, expected value = 0.015307103336419036, variance = 0.0009844251666054342, sample length = 279261, time = 376.99737882614136
-method_4, expected value = 0.015677392526086492, variance = 2.392409410134429e-07, sample length = 78, time = 0.031011581420898438
-
-alpha = 0.01:
-method_3, expected value = 0.00019848227109325254, variance = 1.8947353262502825e-07, sample length = 320049, time = 2.378948926925659
-method_4, expected value = 0.00019992600365180706, variance = 1.6215034755249157e-15, sample length = 2, time = 0.0010008811950683594
+method_3, expected value = 0.00019918280003710062, variance = 1.8993452382158234e-07, sample length = 319857, time = 43.19104480743408203
+method_4, expected value = 0.00019994056621493801, variance = 7.644958842242919e-16, sample length = 2, time = 0.0
