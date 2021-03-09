@@ -11,17 +11,16 @@ from scipy.stats import expon
 
 def kolmogorov(alpha):
     """
-
     :param alpha: the scale parameter
     :return: line about accepting or rejecting a hypothesis
     """
-    arr = np.random.exponential(scale=1, size=n)  # sample of size n from an exponential distribution
+    arr = np.random.exponential(scale=1 / alpha, size=n)  # sample of size n from an exponential distribution
 
     arr = np.sort(arr)  # order statistic
     k = np.array(range(1, len(arr) + 1))
 
-    D = np.maximum(expon.cdf(x=arr, loc=0, scale=1 / alpha) - (k - 1) / len(arr),
-                   k / len(arr) - expon.cdf(x=arr, loc=0, scale=1 / alpha)).max()
+    D = np.maximum(expon.cdf(x=arr, loc=0, scale=1) - (k - 1) / len(arr),
+                   k / len(arr) - expon.cdf(x=arr, loc=0, scale=1)).max()
 
     if np.sqrt(len(arr)) * D < kolmogi(gamma):
         return f'D = {D:0.4f}. \nThe statistical data do NOT CONFLICT with the H0 hypothesis.\n'
