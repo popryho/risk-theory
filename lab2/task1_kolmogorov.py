@@ -14,7 +14,7 @@ def kolmogorov(alpha):
     :param alpha: the scale parameter
     :return: line about accepting or rejecting a hypothesis
     """
-    arr = np.random.exponential(scale=1 / alpha, size=n)  # sample of size n from an exponential distribution
+    arr = np.random.exponential(scale=alpha, size=n)  # sample of size n from an exponential distribution
 
     arr = np.sort(arr)  # order statistic
     k = np.array(range(1, len(arr) + 1))

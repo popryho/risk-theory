@@ -17,7 +17,7 @@ def chi_experiment(alpha):
     :param alpha: the scale parameter
     :return: line about accepting or rejecting a hypothesis
     """
-    arr = np.random.exponential(scale=1 / alpha, size=n)
+    arr = np.random.exponential(scale=alpha, size=n)
     r = int(20 * n / 1000)
 
     z_gamma = chdtri(r - 1, gamma)
