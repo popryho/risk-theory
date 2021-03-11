@@ -1,6 +1,5 @@
 """
-Check hypothesis using the one-sided SMIRNOV test
-Smirnov homogeneity test
+Check hypothesis using the one-sided SMIRNOV homogeneity test.
 from scipy.stats import ks_2samp
 """
 
