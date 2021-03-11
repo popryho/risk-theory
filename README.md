@@ -20,7 +20,8 @@
 
 ## LABORATORY WORK №2
 
-The statistical hypothesis tests about the type of distribution, and the hypothesis of homogeneity
+The statistical hypothesis tests about the type of distribution, and the hypothesis of homogeneity.
+
 Draw samples from an exponential distribution with different scale parameters and check hypothesis with the determined 
 significance level for different sample lengths.
 
