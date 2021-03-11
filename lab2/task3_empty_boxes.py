@@ -18,10 +18,10 @@ def empty_cells(alpha):
     :param alpha: the scale parameter
     :return: line about accepting or rejecting a hypothesis
     """
-    arr = np.random.exponential(scale=alpha, size=n)
-    r = int(n / ro)
-
+    arr = np.random.exponential(scale=1 / alpha, size=n)
     uni_sample = expon.cdf(arr, scale=1)
+
+    r = int(n / ro)
     nu, _ = np.histogram(uni_sample, bins=r, range=(0, 1))
 
     count = np.count_nonzero(nu == 0)
