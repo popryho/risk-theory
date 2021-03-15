@@ -33,3 +33,18 @@ significance level for different sample lengths.
     - Check hypothesis using the EMPTY-BOXES test
 ### task 4
     - Check hypothesis using the one-sided SMIRNOV homogeneity test.
+
+## LABORATORY WORK №3
+
+Statistical hypothesis tests:
+
+    - homogeneity hypothesis (EMPTY-BOXES, and CHI-SQUARE test)
+    - independence hypothesis (CHI-SQUARE, SPEARMAN and KENDALL tests)
+    - randomness hypothesis (test based on the number of inversions)
+
+### task 1
+    Check the homogeneity hypothesis using the EMPTY-BOXES test with the following parameters:
+        - n = 500,
+### task 2
+
+### task 3
