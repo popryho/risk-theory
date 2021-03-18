@@ -9,7 +9,7 @@ def empty_cell(alpha):
     sample_1 = np.sort(np.random.exponential(scale=1, size=n))
     sample_2 = np.random.exponential(scale=1 / alpha, size=m)
     k_value = 0
-    for i in range(1, sample_1.shape[0]):
+    for i in range(1, n):
         mask = np.logical_and(sample_2 > sample_1[i - 1], sample_1[i] > sample_2)
         k_value += 1 if sample_2[mask].shape[0] == 0 else 0
 
@@ -26,24 +26,24 @@ def empty_cell(alpha):
 
 def chi_square(alpha):
 
-    sample_1 = np.random.exponential(scale=1, size=n)
-    sample_2 = np.random.exponential(scale=1, size=m)
-    sample_3 = np.random.exponential(scale=1 / alpha, size=k)
-
-    distributions = [sample_1, sample_2, sample_3]
+    samples = [
+        np.random.exponential(scale=1, size=n),
+        np.random.exponential(scale=1, size=m),
+        np.random.exponential(scale=1 / alpha, size=k)
+    ]
 
     n_total = n + m + k
 
     split_list = np.linspace(0, 10, r)
-    v = np.zeros((r - 1, len(distributions)))
+    v = np.zeros((r - 1, len(samples)))
 
     for idx_split in range(1, r):
-        for idx_dist, dist in enumerate(distributions):
+        for idx_dist, dist in enumerate(samples):
             mask = np.logical_and(dist > split_list[idx_split - 1], dist < split_list[idx_split])
             v[idx_split - 1, idx_dist] = dist[mask].shape[0]
     delta = 0
     for i in range(r - 1):
-        for j in range(len(distributions)):
+        for j in range(len(samples)):
             delta += (v[i, j] - (v[i, :].sum() * v[:, j].sum()) / n_total) ** 2 / \
                      (v[i, :].sum() * v[:, j].sum() + 1e-10)
     delta *= n_total
