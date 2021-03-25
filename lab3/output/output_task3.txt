@@ -1,0 +1,12 @@
+--------------------------------------------------
+n=500, Number of inversions = 92410, criterion = 16.118, z = 1.959963984540054
+The statistical data do CONFLICT with the H0 hypothesis. 
+
+--------------------------------------------------
+n=5000, Number of inversions = 1456269, criterion = 81.331, z = 1.959963984540054
+The statistical data do CONFLICT with the H0 hypothesis. 
+
+--------------------------------------------------
+n=50000, Number of inversions = 751425230, criterion = 67.854, z = 1.959963984540054
+The statistical data do CONFLICT with the H0 hypothesis. 
+
