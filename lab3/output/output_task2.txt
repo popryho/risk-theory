@@ -1,0 +1,36 @@
+TASK 2
+
+METHOD 1: chi_square
+--------------------------------------------------
+n = 500, r = 10, k = 20, delta = 7386.1062, criterion = 202.5126 
+The statistical data do CONFLICT with the H0 hypothesis. 
+--------------------------------------------------
+n = 5000, r = 10, k = 20, delta = 823375.4602, criterion = 202.5126 
+The statistical data do CONFLICT with the H0 hypothesis. 
+--------------------------------------------------
+n = 50000, r = 10, k = 20, delta = 83233374.7108, criterion = 202.5126 
+The statistical data do CONFLICT with the H0 hypothesis. 
+
+
+METHOD 2: spearman
+--------------------------------------------------
+n = 500, |p| = 0.358, criterion = 0.088 
+The statistical data do CONFLICT with the H0 hypothesis. 
+--------------------------------------------------
+n = 5000, |p| = 0.416, criterion = 0.028 
+The statistical data do CONFLICT with the H0 hypothesis. 
+--------------------------------------------------
+n = 50000, |p| = 0.428, criterion = 0.009 
+The statistical data do CONFLICT with the H0 hypothesis. 
+
+
+METHOD 3: kendall
+--------------------------------------------------
+n = 500, |tau| = 0.228, criterion = 0.058 
+The statistical data do CONFLICT with the H0 hypothesis. 
+--------------------------------------------------
+n = 5000, |tau| = 0.291, criterion = 0.018 
+The statistical data do CONFLICT with the H0 hypothesis. 
+--------------------------------------------------
+n = 50000, |tau| = 0.290, criterion = 0.006 
+The statistical data do CONFLICT with the H0 hypothesis. 
