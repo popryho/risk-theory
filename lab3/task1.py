@@ -34,6 +34,8 @@ def chi_square(alpha):
 
     n_total = n + m + k
 
+    r = int(20 * np.array(n_total) / 1000)
+
     split_list = np.linspace(0, 10, r)
     v = np.zeros((r - 1, len(samples)))
 
@@ -44,23 +46,23 @@ def chi_square(alpha):
     delta = 0
     for i in range(r - 1):
         for j in range(len(samples)):
-            delta += (v[i, j] - (v[i, :].sum() * v[:, j].sum()) / n_total) ** 2 / \
-                     (v[i, :].sum() * v[:, j].sum() + 1e-10)
+            if v[i, :].sum(dtype=np.int64) * v[:, j].sum(dtype=np.int64) != 0:
+                delta += ((v[i, j] - (v[i, :].sum(dtype=np.int64) * v[:, j].sum(dtype=np.int64)) / n_total) ** 2)
+                delta /= (v[i, :].sum(dtype=np.int64) * v[:, j].sum(dtype=np.int64))
     delta *= n_total
 
     criterion = chdtri(r - 1, gamma)
     if delta > criterion:
-        return f'Delta = {delta:0.4f}, criterion = {criterion:0.4f}. \n' \
+        return f'r = {r}, Delta = {delta:0.4f}, criterion = {criterion:0.4f}. \n' \
                f'The statistical data do CONFLICT with the H0 hypothesis.'
     else:
-        return f'Delta = {delta:0.4f}, criterion = {criterion:0.4f}. \n' \
+        return f'r = {r}, Delta = {delta:0.4f}, criterion = {criterion:0.4f}. \n' \
                f'The statistical data do NOT CONFLICT with the H0 hypothesis.'
 
 
 if __name__ == '__main__':
 
     a = 1.1
-    r = 4
     with open('output/output_task1.txt', 'w') as txt:
         """
         EXAMPLE. EMPTY-BOXES test.
@@ -73,7 +75,7 @@ if __name__ == '__main__':
         """
         EXAMPLE. CHI-SQUARE test.
         """
-        txt.write(f'\nTASK B.\n\nr = {r}\n')
+        txt.write(f'\nTASK B.\n\n')
         for n in map(int, (2e2, 2e3, 2e4)):
             m, k = 3 * n, 2 * n
             txt.write(f'{"-" * 50}\nn={n}, m={m}, k={k}, {chi_square(alpha=a)}\n')

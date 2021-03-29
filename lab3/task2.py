@@ -7,6 +7,7 @@ from const import gamma
 
 
 def chi_square():
+
     sample_1 = np.random.uniform(0, 1, size=n)
     sample_2 = sample_1 + np.random.uniform(-1, 1, size=n)
 
@@ -24,7 +25,8 @@ def chi_square():
     delta = 0
     for i in range(v.shape[0]):
         for j in range(v.shape[1]):
-            delta += ((v[i, j] - (v[i, :].sum() * v[:, j].sum()) / n_total) ** 2) / (v[i, :].sum() * v[:, j].sum())
+            delta += ((v[i, j] - v.sum(axis=1, dtype=np.int64)[i] * v.sum(axis=0, dtype=np.int64)[j] / n_total) ** 2)
+            delta /= (v.sum(axis=1, dtype=np.int64)[i] * v.sum(axis=0, dtype=np.int64)[j])
     delta *= n_total
     criterion = chdtri((r - 1) * (k - 1), gamma)
 
@@ -37,6 +39,7 @@ def chi_square():
 
 
 def spearman():
+
     sample_1 = np.random.uniform(0, 1, size=n)
     sample_2 = sample_1 + np.random.uniform(-1, 1, size=n)
 
@@ -75,10 +78,15 @@ def kendall():
 
 if __name__ == '__main__':
 
-    r, k = 10, 20
     with open('output/output_task2.txt', 'w') as txt:
         txt.write("TASK 2")
         for idx, method in enumerate((chi_square, spearman, kendall)):
             txt.write(f'\n\nMETHOD {idx+1}: {method.__name__}\n')
-            for n in map(int, (5e2, 5e3, 5e4)):
-                txt.write(f'{"-" * 50}\nn = {n}, {method()}')
+
+            if method.__name__ == 'chi_square':
+                for (r, k), n in zip(((5, 10), (55, 60), (105, 110)),
+                                     map(int, (5e2, 5e3, 5e4))):
+                    txt.write(f'{"-" * 50}\nn = {n}, {method()}')
+            else:
+                for n in map(int, (5e2, 5e3, 5e4)):
+                    txt.write(f'{"-" * 50}\nn = {n}, {method()}')
