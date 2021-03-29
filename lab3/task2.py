@@ -34,7 +34,7 @@ def chi_square():
         return f'r = {r}, k = {k}, delta = {delta:0.4f}, criterion = {criterion:0.4f} \n' \
                f'The statistical data do CONFLICT with the H0 hypothesis. \n'
     else:
-        return f'delta = {delta:0.4f}, criterion = {criterion:0.4f} \n' \
+        return f'r = {r}, k = {k}, delta = {delta:0.4f}, criterion = {criterion:0.4f} \n' \
                f'The statistical data do NOT CONFLICT with the H0 hypothesis. \n'
 
 

@@ -5,10 +5,10 @@ METHOD 1: chi_square
 n = 500, r = 5, k = 10, delta = 1287.3535, criterion = 50.9985
 The statistical data do CONFLICT with the H0 hypothesis. 
 --------------------------------------------------
-n = 5000, delta = 11091.6071, criterion = 3318.4273
+n = 5000, r = 55, k = 60,  delta = 11091.6071, criterion = 3318.4273
 The statistical data do CONFLICT with the H0 hypothesis.
 --------------------------------------------------
-n = 50000, delta = 104630.649738, criterion = 11584.8011
+n = 50000, r = 105, k = 110,  delta = 104630.649738, criterion = 11584.8011
 The statistical data do CONFLICT with the H0 hypothesis.
 
 
