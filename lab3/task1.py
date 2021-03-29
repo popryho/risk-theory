@@ -34,7 +34,7 @@ def chi_square(alpha):
 
     n_total = n + m + k
 
-    r = int(20 * np.array(n_total) / 1000)
+    r = int((m + k) / 10)
 
     split_list = np.linspace(0, 10, r)
     v = np.zeros((r - 1, len(samples)))

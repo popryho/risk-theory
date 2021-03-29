@@ -2,23 +2,23 @@ TASK A.
 
 gamma = 0.05 => z_gamma = 1.6449
 --------------------------------------------------
-n=500, m=1000, k = 181, criterion = 180.8233. 
-The statistical data do CONFLICT with the H0 hypothesis.
---------------------------------------------------
-n=5000, m=10000, k = 1677, criterion = 1711.4339. 
+n=500, m=1000, k = 163, criterion = 180.8233. 
 The statistical data do NOT CONFLICT with the H0 hypothesis.
 --------------------------------------------------
-n=50000, m=100000, k = 16701, criterion = 16808.2331. 
+n=5000, m=10000, k = 1640, criterion = 1711.4339. 
+The statistical data do NOT CONFLICT with the H0 hypothesis.
+--------------------------------------------------
+n=50000, m=100000, k = 16668, criterion = 16808.2331. 
 The statistical data do NOT CONFLICT with the H0 hypothesis.
 
 TASK B.
 
 --------------------------------------------------
-n=200, m=600, k=400, r = 24, Delta = 0.6667, criterion = 35.1725. 
+n=200, m=600, k=400, r = 100, Delta = 0.3346, criterion = 123.2252. 
 The statistical data do NOT CONFLICT with the H0 hypothesis.
 --------------------------------------------------
-n=2000, m=6000, k=4000, r = 240, Delta = 1.3335, criterion = 276.0624. 
+n=2000, m=6000, k=4000, r = 1000, Delta = 0.3335, criterion = 1073.6427. 
 The statistical data do NOT CONFLICT with the H0 hypothesis.
 --------------------------------------------------
-n=20000, m=60000, k=40000, r = 2400, Delta = 0.3333, criterion = 2514.0607. 
+n=20000, m=60000, k=40000, r = 10000, Delta = 0.3333, criterion = 10232.7373. 
 The statistical data do NOT CONFLICT with the H0 hypothesis.
