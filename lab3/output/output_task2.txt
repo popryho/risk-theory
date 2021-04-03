@@ -2,35 +2,35 @@ TASK 2
 
 METHOD 1: chi_square
 --------------------------------------------------
-n = 500, r = 5, k = 10, delta = 1287.3535, criterion = 50.9985
+n = 500, r = 5, k = 10, delta = 77.3938, criterion = 50.9985 
 The statistical data do CONFLICT with the H0 hypothesis. 
 --------------------------------------------------
-n = 5000, r = 55, k = 60,  delta = 11091.6071, criterion = 3318.4273
-The statistical data do CONFLICT with the H0 hypothesis.
+n = 5000, r = 15, k = 15, delta = 629.2338, criterion = 229.6632 
+The statistical data do CONFLICT with the H0 hypothesis. 
 --------------------------------------------------
-n = 50000, r = 105, k = 110,  delta = 104630.649738, criterion = 11584.8011
-The statistical data do CONFLICT with the H0 hypothesis.
+n = 50000, r = 40, k = 35, delta = 1478.8870, criterion = 1411.8277 
+The statistical data do CONFLICT with the H0 hypothesis. 
 
 
 METHOD 2: spearman
 --------------------------------------------------
-n = 500, |p| = 0.373, criterion = 0.088 
+n = 500, |p| = 0.411, criterion = 0.088 
 The statistical data do CONFLICT with the H0 hypothesis. 
 --------------------------------------------------
-n = 5000, |p| = 0.413, criterion = 0.028 
+n = 5000, |p| = 0.426, criterion = 0.028 
 The statistical data do CONFLICT with the H0 hypothesis. 
 --------------------------------------------------
-n = 50000, |p| = 0.423, criterion = 0.009 
+n = 50000, |p| = 0.426, criterion = 0.009 
 The statistical data do CONFLICT with the H0 hypothesis. 
 
 
 METHOD 3: kendall
 --------------------------------------------------
-n = 500, |tau| = 0.313, criterion = 0.058 
+n = 500, |tau| = 0.292, criterion = 0.058 
 The statistical data do CONFLICT with the H0 hypothesis. 
 --------------------------------------------------
-n = 5000, |tau| = 0.280, criterion = 0.018 
+n = 5000, |tau| = 0.293, criterion = 0.018 
 The statistical data do CONFLICT with the H0 hypothesis. 
 --------------------------------------------------
-n = 50000, |tau| = 0.292, criterion = 0.006 
+n = 50000, |tau| = 0.288, criterion = 0.006 
 The statistical data do CONFLICT with the H0 hypothesis. 

@@ -84,7 +84,7 @@ if __name__ == '__main__':
             txt.write(f'\n\nMETHOD {idx+1}: {method.__name__}\n')
 
             if method.__name__ == 'chi_square':
-                for (r, k), n in zip(((5, 10), (55, 60), (105, 110)),
+                for (r, k), n in zip(((5, 10), (15, 15), (40, 35)),
                                      map(int, (5e2, 5e3, 5e4))):
                     txt.write(f'{"-" * 50}\nn = {n}, {method()}')
             else:
